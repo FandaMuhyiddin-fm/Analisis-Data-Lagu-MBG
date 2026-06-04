@@ -81,7 +81,7 @@ Buat laporan dengan format markdown yang rapi, profesional, dan mudah dibaca."""
         import anthropic
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-3-5-haiku-latest",
             max_tokens=1500,
             temperature=0.2,
             messages=[
@@ -98,7 +98,7 @@ Buat laporan dengan format markdown yang rapi, profesional, dan mudah dibaca."""
                 "content-type": "application/json"
             }
             payload = {
-                "model": "claude-3-5-sonnet-20241022",
+                "model": "claude-3-5-haiku-latest",
                 "max_tokens": 1500,
                 "temperature": 0.2,
                 "messages": [{"role": "user", "content": prompt}]
